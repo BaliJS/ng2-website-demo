@@ -1,0 +1,13 @@
+<div *ngIf="featuredProduct" id="featuredProduct">
+    <img alt="Featured Product" src="/Images/Products/{{featuredProduct.imageFileName}}">
+    <div id="featuredProductInfo">
+        <div id="productInfo">
+            <h2 [innerText]="featuredProduct.name"></h2>
+            <p class="price">{{featuredProduct.price}}</p>
+            <p class="description">{{featuredProduct.description}}</p>
+        </div>
+        <div id="callToAction">
+            <!--<a class="order-button" href="/order/7" [title]="Order {{featuredProduct.name}}">Order Now</a>-->
+        </div>
+    </div>
+</div>

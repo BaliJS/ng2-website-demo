@@ -1,0 +1,22 @@
+<div id="page">
+    <header>
+        <p class="site-title"><a href="" [routerLink]="['Home']">{{storeName}}</a></p>
+        <nav>
+            <ul>
+                <li><a [routerLink]="['Home']">Home</a></li>
+                <li><a [routerLink]="['AboutUs']">About Us</a></li>
+            </ul>
+        </nav>
+      
+    </header>
+    <div id="body">
+        
+         <router-outlet></router-outlet>
+
+
+      
+    </div>
+    <footer>
+        ©2016 - BaliJS Bakery
+    </footer>
+</div>

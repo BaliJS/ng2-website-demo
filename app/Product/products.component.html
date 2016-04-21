@@ -1,0 +1,23 @@
+<div id="productsWrapper" *ngIf="products">
+    <ul id="products" data-role="listview" data-inset="true">
+        <li class="product" *ngFor="#product of products">
+            <a href="/order/{{product.id}}" [title]="product.name">
+                <img class="hide-from-desktop" src="/Images/Products/Thumbnails/{{product.imageFileName}}" alt="Image of {{product.name}}">
+
+                <div class="productInfo">
+                    <h3>{{product.name}}</h3>
+                    <img class="product-image hide-from-mobile" src="/Images/Products/Thumbnails/{{product.imageFileName}}" alt="Image of {{product.name}}">
+                    <p class="description">{{product.description}}</p>
+                    <p class="price hide-from-desktop">${{product.price}}</p>
+                </div>
+            </a>
+
+            <!-- Desktop only -->
+            <div class="action  hide-from-mobile">
+                <p class="price">${{product.price}}</p>
+                <a class="order-button" href="/order/{{product.id}}" title="Order {{product.name}}">Order Now</a>
+            </div>
+
+        </li>
+    </ul>
+</div>
